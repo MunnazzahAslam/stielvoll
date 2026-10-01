@@ -2,6 +2,7 @@
 
 import type { RefObject } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { BOX_PRICE_CENTS, type Flavour } from "@/data/shop";
 import { cartSubtotalCents, mixEntries, removeBox, setSingle } from "@/lib/cart";
 import { useCart, useLocalised, useMoney } from "./hooks";
@@ -38,9 +39,9 @@ export default function CartDrawer({ dialog }: { dialog: RefObject<HTMLDialogEle
           <div className="grid flex-1 place-items-center px-5 text-center">
             <div>
               <p className="text-lg font-semibold">{t("empty")}</p>
-              <a href="#flavours" onClick={close} className="mt-4 inline-flex h-12 items-center rounded-full bg-currant px-6 font-bold text-frost">
+              <Link href={{ pathname: "/", hash: "flavours" }} onClick={close} className="mt-4 inline-flex h-12 items-center rounded-full bg-currant px-6 font-bold text-frost">
                 {t("emptyCta")}
-              </a>
+              </Link>
             </div>
           </div>
         ) : (
@@ -99,10 +100,9 @@ export default function CartDrawer({ dialog }: { dialog: RefObject<HTMLDialogEle
                 <span className="font-display text-2xl font-extrabold tabular-nums">{money(cartSubtotalCents(cart))}</span>
               </p>
               <p className="mt-1 text-sm text-currant/70">{t("note")}</p>
-              <button type="button" disabled className="mt-4 h-[52px] w-full rounded-full bg-currant font-bold text-frost disabled:opacity-40">
+              <Link href="/checkout" onClick={close} className="mt-4 grid h-[52px] w-full place-items-center rounded-full bg-currant font-bold text-frost">
                 {t("checkout")}
-              </button>
-              <p className="mt-2 text-center text-xs font-medium text-currant/60">{t("soon")}</p>
+              </Link>
             </div>
           </>
         )}

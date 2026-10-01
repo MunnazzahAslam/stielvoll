@@ -1,7 +1,11 @@
 {
   "meta": {
     "title": "Stielvoll · Frucht am Stiel aus Hamburg-Ottensen",
-    "description": "Bio-Eis am Stiel aus Hamburg-Ottensen. Heute abholen oder gefroren liefern lassen."
+    "description": "Bio-Eis am Stiel aus Hamburg-Ottensen. Heute abholen oder gefroren liefern lassen.",
+    "ogAlt": "Stielvoll: ein rotes Eis am Stiel und der Satz „Frucht am Stiel. Sonst nichts.“",
+    "checkout": "Kasse",
+    "order": "Bestellung {number}",
+    "admin": "Bestellungen"
   },
   "nav": {
     "flavours": "Sorten",
@@ -70,7 +74,6 @@
     "subtotal": "Zwischensumme",
     "note": "Abholung oder Lieferung wählst du im nächsten Schritt.",
     "checkout": "Zur Kasse",
-    "soon": "Die Kasse kommt mit Checkpoint 3.",
     "close": "Warenkorb schließen"
   },
   "how": {
@@ -147,5 +150,94 @@
         "a": "Ja, bis zwei Stunden vor deinem Zeitfenster."
       }
     ]
+  },
+  "checkout": {
+    "title": "Zur Kasse.",
+    "back": "Zurück zum Shop",
+    "emptyTitle": "Dein Warenkorb ist leer.",
+    "emptyCta": "Sorten ansehen",
+    "cancelled": "Die Zahlung wurde abgebrochen. Es wurde nichts abgebucht, dein Warenkorb ist noch da. Du kannst es gleich noch einmal versuchen.",
+    "contact": "Deine Daten",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "phoneHint": "Nur falls wir dich wegen der Bestellung erreichen müssen.",
+    "fulfilment": "Abholung oder Lieferung",
+    "pickup": "Abholung",
+    "pickupText": "Im Laden in Ottensen. Kostenlos.",
+    "delivery": "Lieferung",
+    "deliveryText": "Gefroren an die Tür, am selben Tag. {fee}, ab {free} kostenlos.",
+    "address": "Straße und Hausnummer",
+    "postcode": "Postleitzahl",
+    "postcodeOk": "Wir liefern nach {district}.",
+    "postcodeOutside": "Nach {postcode} liefern wir leider nicht: Tiefkühlware geht nur nach Altona, Ottensen, Eimsbüttel, Sternschanze, St. Pauli und in die HafenCity.",
+    "switchToPickup": "Stattdessen im Laden abholen",
+    "slot": "Zeitfenster",
+    "slotHint": "Zwei Stunden, zwischen 12:00 und 20:00 Uhr.",
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "slotsLoading": "Zeitfenster werden geladen …",
+    "slotsError": "Die Zeitfenster konnten nicht geladen werden.",
+    "retry": "Nochmal versuchen",
+    "slotFull": "Ausgebucht",
+    "slotTime": "{from}–{to}",
+    "slotNone": "Gerade gibt es keine freien Zeitfenster. Schau später noch einmal vorbei.",
+    "summary": "Deine Bestellung",
+    "subtotal": "Zwischensumme",
+    "deliveryFee": "Lieferung",
+    "free": "kostenlos",
+    "total": "Gesamt",
+    "pay": "Weiter zur Zahlung",
+    "payDemo": "Jetzt bestellen",
+    "paying": "Einen Moment …",
+    "testNote": "Stripe-Testmodus: Zahl mit der Karte 4242 4242 4242 4242, einem beliebigen Ablaufdatum in der Zukunft und einer beliebigen Prüfziffer. Es wird kein echtes Geld bewegt.",
+    "demoNote": "Demo-Modus: Es ist kein Zahlungsanbieter verbunden, die Bestellung wird ohne Zahlung angelegt.",
+    "errors": {
+      "cart_empty": "Dein Warenkorb ist leer.",
+      "invalid_details": "Bitte prüf die markierten Felder.",
+      "postcode_outside": "Nach dieser Postleitzahl liefern wir nicht. Wähl Abholung oder eine Adresse in unserem Liefergebiet.",
+      "slot_unavailable": "Dieses Zeitfenster ist nicht mehr buchbar. Bitte wähl ein anderes.",
+      "slot_full": "Dieses Zeitfenster ist gerade voll geworden. Bitte wähl ein anderes.",
+      "payment_unavailable": "Die Zahlung ist gerade nicht erreichbar. Bitte versuch es gleich noch einmal.",
+      "network": "Keine Verbindung zum Shop. Bitte versuch es noch einmal."
+    },
+    "fieldErrors": {
+      "name": "Bitte gib deinen Namen an.",
+      "email": "Bitte gib eine gültige E-Mail-Adresse an.",
+      "phone": "Bitte gib eine Telefonnummer an.",
+      "address": "Bitte gib Straße und Hausnummer an.",
+      "postcode": "Bitte gib eine fünfstellige Postleitzahl an.",
+      "slot": "Bitte wähl ein Zeitfenster."
+    }
+  },
+  "order": {
+    "thanks": "Danke, {name}!",
+    "number": "Bestellnummer",
+    "pickupAt": "Abholung",
+    "deliveryAt": "Lieferung",
+    "slot": "{day}, {from}–{to} Uhr",
+    "shop": "Im Laden in Hamburg-Ottensen",
+    "items": "Deine Box",
+    "total": "Bezahlt",
+    "totalDemo": "Gesamt",
+    "frozenTitle": "Gleich ins Gefrierfach.",
+    "frozenTip": "Bei −18 °C hält das Eis bis zu drei Monate. Einmal angetaut, bitte nicht wieder einfrieren.",
+    "deliveryTip": "Wir bringen dein Eis gefroren in einer Kühlbox. Sei im Zeitfenster bitte zu Hause.",
+    "pickupTip": "Hast du einen längeren Heimweg, bring eine Kühltasche mit.",
+    "change": "Ändern oder stornieren geht bis zwei Stunden vor deinem Zeitfenster. Nenn uns dafür deine Bestellnummer.",
+    "pendingTitle": "Wir warten noch auf deine Zahlung.",
+    "pendingText": "Das dauert meist nur ein paar Sekunden. Die Seite aktualisiert sich von selbst.",
+    "back": "Zurück zum Shop",
+    "concept": "Konzeptprojekt: Diese Bestellung wird nicht hergestellt und nicht ausgeliefert."
+  },
+  "notFound": {
+    "title": "Hier ist nichts.",
+    "text": "Diese Seite gibt es nicht, oder der Link stimmt nicht mehr.",
+    "cta": "Zum Shop"
+  },
+  "error": {
+    "title": "Da ist etwas schiefgegangen.",
+    "text": "Versuch es bitte noch einmal. Dein Warenkorb bleibt erhalten.",
+    "retry": "Nochmal versuchen"
   }
 }

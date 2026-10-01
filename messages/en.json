@@ -1,7 +1,11 @@
 {
   "meta": {
     "title": "Stielvoll · Fruit on a stick from Hamburg-Ottensen",
-    "description": "Organic popsicles made in Hamburg-Ottensen. Pick up today or get them delivered frozen."
+    "description": "Organic popsicles made in Hamburg-Ottensen. Pick up today or get them delivered frozen.",
+    "ogAlt": "Stielvoll: a red popsicle on a stick and the line “Fruit on a stick. Nothing else.”",
+    "checkout": "Checkout",
+    "order": "Order {number}",
+    "admin": "Orders"
   },
   "nav": {
     "flavours": "Flavours",
@@ -70,7 +74,6 @@
     "subtotal": "Subtotal",
     "note": "You choose pickup or delivery in the next step.",
     "checkout": "Checkout",
-    "soon": "Checkout arrives in checkpoint 3.",
     "close": "Close cart"
   },
   "how": {
@@ -147,5 +150,94 @@
         "a": "Yes, up to two hours before your slot."
       }
     ]
+  },
+  "checkout": {
+    "title": "Checkout.",
+    "back": "Back to the shop",
+    "emptyTitle": "Your cart is empty.",
+    "emptyCta": "See the flavours",
+    "cancelled": "Payment was cancelled. Nothing was charged and your cart is still here, so you can try again straight away.",
+    "contact": "Your details",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "phoneHint": "Only in case we need to reach you about the order.",
+    "fulfilment": "Pickup or delivery",
+    "pickup": "Pickup",
+    "pickupText": "At the shop in Ottensen. Free.",
+    "delivery": "Delivery",
+    "deliveryText": "Frozen, to your door, the same day. {fee}, free from {free}.",
+    "address": "Street and number",
+    "postcode": "Postcode",
+    "postcodeOk": "We deliver to {district}.",
+    "postcodeOutside": "Sorry, we don’t deliver to {postcode}: frozen goods only go to Altona, Ottensen, Eimsbüttel, Sternschanze, St. Pauli and HafenCity.",
+    "switchToPickup": "Pick up at the shop instead",
+    "slot": "Time slot",
+    "slotHint": "Two hours, between 12:00 and 20:00.",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "slotsLoading": "Loading time slots …",
+    "slotsError": "The time slots couldn’t be loaded.",
+    "retry": "Try again",
+    "slotFull": "Full",
+    "slotTime": "{from}–{to}",
+    "slotNone": "There are no free time slots right now. Please check back later.",
+    "summary": "Your order",
+    "subtotal": "Subtotal",
+    "deliveryFee": "Delivery",
+    "free": "free",
+    "total": "Total",
+    "pay": "Continue to payment",
+    "payDemo": "Place order",
+    "paying": "One moment …",
+    "testNote": "Stripe test mode: pay with card 4242 4242 4242 4242, any future expiry date and any CVC. No real money moves.",
+    "demoNote": "Demo mode: no payment provider is connected, so the order is placed without payment.",
+    "errors": {
+      "cart_empty": "Your cart is empty.",
+      "invalid_details": "Please check the marked fields.",
+      "postcode_outside": "We don’t deliver to this postcode. Choose pickup, or an address inside our delivery area.",
+      "slot_unavailable": "This time slot can no longer be booked. Please choose another.",
+      "slot_full": "This time slot has just filled up. Please choose another.",
+      "payment_unavailable": "Payment isn’t available right now. Please try again in a moment.",
+      "network": "Couldn’t reach the shop. Please try again."
+    },
+    "fieldErrors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a phone number.",
+      "address": "Please enter your street and number.",
+      "postcode": "Please enter a five-digit postcode.",
+      "slot": "Please choose a time slot."
+    }
+  },
+  "order": {
+    "thanks": "Thank you, {name}!",
+    "number": "Order number",
+    "pickupAt": "Pickup",
+    "deliveryAt": "Delivery",
+    "slot": "{day}, {from}–{to}",
+    "shop": "At the shop in Hamburg-Ottensen",
+    "items": "Your order",
+    "total": "Paid",
+    "totalDemo": "Total",
+    "frozenTitle": "Straight into the freezer.",
+    "frozenTip": "At −18 °C they keep for up to three months. Once they have melted, don’t refreeze them.",
+    "deliveryTip": "We bring your popsicles frozen in a cool box. Please be home during your slot.",
+    "pickupTip": "If it’s a long way home, bring a cool bag.",
+    "change": "You can change or cancel up to two hours before your slot. Just give us your order number.",
+    "pendingTitle": "We’re still waiting for your payment.",
+    "pendingText": "This usually takes a few seconds. The page refreshes by itself.",
+    "back": "Back to the shop",
+    "concept": "Concept project: this order won’t be made or delivered."
+  },
+  "notFound": {
+    "title": "Nothing here.",
+    "text": "This page doesn’t exist, or the link is no longer right.",
+    "cta": "To the shop"
+  },
+  "error": {
+    "title": "Something went wrong.",
+    "text": "Please try again. Your cart is safe.",
+    "retry": "Try again"
   }
 }
