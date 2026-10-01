@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Stielvoll · Frucht am Stiel aus Hamburg-Ottensen",
+    "description": "Bio-Eis am Stiel aus Hamburg-Ottensen. Heute abholen oder gefroren liefern lassen."
+  },
+  "nav": {
+    "flavours": "Sorten",
+    "box": "Box",
+    "visit": "Besuch",
+    "cart": "Warenkorb",
+    "cartCount": "{count, plural, =0 {Warenkorb, leer} one {Warenkorb, # Eis} other {Warenkorb, # Eis}}",
+    "switchTo": "Switch to English",
+    "main": "Hauptnavigation",
+    "home": "Stielvoll, zur Startseite",
+    "cartOpen": "Warenkorb öffnen"
+  },
+  "hero": {
+    "headline1": "Frucht am Stiel.",
+    "headline2": "Sonst nichts.",
+    "subline": "Bio-Eis am Stiel aus Hamburg-Ottensen. Heute abholen oder gefroren liefern lassen.",
+    "cta": "Box zusammenstellen",
+    "hint": "Zieh mich. Oder beiß ab.",
+    "flavours": "Sorte wählen",
+    "popsicle": "Ein Eis am Stiel in der Sorte {flavour}. Ziehen: Es wackelt wie Wackelpudding. Antippen: Du beißt ein Stück ab.",
+    "fresh": "Neues Eis"
+  },
+  "footer": {
+    "concept": "Stielvoll ist eine Konzeptmarke für ein Portfolio-Projekt. Keine echte Zertifizierung, keine echten Bestellungen.",
+    "place": "Hamburg-Ottensen"
+  },
+  "flavours": {
+    "title": "Sechs Sorten.",
+    "sub": "Nie mehr als vier Zutaten. Zutaten und Allergene stehen an jeder Sorte.",
+    "ingredients": "Zutaten",
+    "allergensNone": "Allergene: keine",
+    "allergensContains": "Enthält: {allergens}",
+    "vegan": "Vegan",
+    "perPiece": "pro Stück",
+    "add": "In den Warenkorb",
+    "addNamed": "{flavour} in den Warenkorb",
+    "show": "{flavour} im Bild oben zeigen"
+  },
+  "box": {
+    "title": "Stell deine Box zusammen.",
+    "sub": "6 Stück für {six}, 12 für {twelve}. Jede Mischung.",
+    "size": "Größe der Box",
+    "sizeLabel": "{size}er-Box",
+    "chosen": "{count} von {size} gewählt",
+    "remaining": "Noch {n}.",
+    "full": "Die Box ist voll.",
+    "over": "{n} zu viel. Nimm {n, plural, one {eines} other {welche}} wieder raus.",
+    "singly": "Einzeln gekauft",
+    "boxPrice": "Als Box",
+    "saving": "Du sparst {amount}",
+    "add": "Box in den Warenkorb",
+    "more": "Ein {flavour} mehr",
+    "less": "Ein {flavour} weniger",
+    "quantity": "{flavour}: {n} in der Box"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Noch nichts drin.",
+    "emptyCta": "Sorten ansehen",
+    "boxOf": "{size}er-Box",
+    "remove": "Entfernen",
+    "removeNamed": "{item} entfernen",
+    "more": "Ein {flavour} mehr",
+    "less": "Ein {flavour} weniger",
+    "contains": "Enthält: {allergens}",
+    "subtotal": "Zwischensumme",
+    "note": "Abholung oder Lieferung wählst du im nächsten Schritt.",
+    "checkout": "Zur Kasse",
+    "soon": "Die Kasse kommt mit Checkpoint 3.",
+    "close": "Warenkorb schließen"
+  },
+  "how": {
+    "title": "So bestellst du.",
+    "steps": [
+      {
+        "title": "Box wählen",
+        "text": "Sechs oder zwölf Eis, in jeder Mischung."
+      },
+      {
+        "title": "Zeit wählen",
+        "text": "Abholung im Laden oder Lieferung in einem Zwei-Stunden-Fenster."
+      },
+      {
+        "title": "Ab ins Gefrierfach",
+        "text": "Zu Hause gleich einfrieren. So hält es bis zu drei Monate."
+      }
+    ]
+  },
+  "about": {
+    "title": "Was drin ist, steht drauf.",
+    "points": [
+      {
+        "title": "Bio-Obst aus der Region",
+        "text": "Wo es geht, kommt das Obst aus dem Hamburger Umland."
+      },
+      {
+        "title": "Höchstens vier Zutaten",
+        "text": "Obst, etwas Rohrzucker, ein Kraut oder Gewürz. Mehr nicht."
+      },
+      {
+        "title": "Jeden Morgen frisch",
+        "text": "Wir stellen das Eis jeden Morgen in Ottensen her."
+      }
+    ]
+  },
+  "visit": {
+    "title": "Besuch und Lieferung.",
+    "hoursTitle": "Öffnungszeiten",
+    "hours": [
+      "Dienstag bis Sonntag, 12:00 bis 20:00 Uhr",
+      "April bis Oktober",
+      "Im Juli und August freitags und samstags bis 22:00 Uhr"
+    ],
+    "pickupTitle": "Abholung",
+    "pickup": "Im Laden in Hamburg-Ottensen, zu der Zeit, die du wählst.",
+    "deliveryTitle": "Lieferung",
+    "delivery": "Am selben Tag, gefroren, in diese Stadtteile:",
+    "fee": "{fee} pro Lieferung, ab {free} kostenlos.",
+    "elsewhere": "Woanders in Hamburg? Dann hol deine Box im Laden ab.",
+    "mapAlt": "Gezeichnete Karte: Stielvoll liegt in Hamburg-Ottensen, nördlich der Elbe."
+  },
+  "faq": {
+    "title": "Gut zu wissen.",
+    "items": [
+      {
+        "q": "Welche Sorten enthalten Allergene?",
+        "a": "Blaubeere Lavendel enthält Gluten (Hafer), Himbeere Rose enthält Milch. Die anderen vier Sorten enthalten keine Allergene."
+      },
+      {
+        "q": "Wie lange hält das Eis?",
+        "a": "Bis zu drei Monate bei −18 °C. Einmal angetaut, bitte nicht wieder einfrieren."
+      },
+      {
+        "q": "Ist das Eis vegan?",
+        "a": "Vier von sechs Sorten sind vegan. Es steht an jeder Sorte."
+      },
+      {
+        "q": "Wohin liefert ihr?",
+        "a": "Nach Altona, Ottensen, Eimsbüttel, Sternschanze, St. Pauli und in die HafenCity, am selben Tag."
+      },
+      {
+        "q": "Kann ich eine Bestellung ändern oder stornieren?",
+        "a": "Ja, bis zwei Stunden vor deinem Zeitfenster."
+      }
+    ]
+  }
+}

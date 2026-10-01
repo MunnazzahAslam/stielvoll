@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Stielvoll · Fruit on a stick from Hamburg-Ottensen",
+    "description": "Organic popsicles made in Hamburg-Ottensen. Pick up today or get them delivered frozen."
+  },
+  "nav": {
+    "flavours": "Flavours",
+    "box": "Box",
+    "visit": "Visit",
+    "cart": "Cart",
+    "cartCount": "{count, plural, =0 {Cart, empty} one {Cart, # popsicle} other {Cart, # popsicles}}",
+    "switchTo": "Auf Deutsch wechseln",
+    "main": "Main",
+    "home": "Stielvoll, back to the start",
+    "cartOpen": "Open cart"
+  },
+  "hero": {
+    "headline1": "Fruit on a stick.",
+    "headline2": "Nothing else.",
+    "subline": "Organic popsicles made in Hamburg-Ottensen. Pick up today or get them delivered frozen.",
+    "cta": "Build a box",
+    "hint": "Drag me. Or take a bite.",
+    "flavours": "Choose a flavour",
+    "popsicle": "A {flavour} popsicle on a stick. Drag it and it wobbles like jelly. Tap it to take a bite.",
+    "fresh": "Fresh one"
+  },
+  "footer": {
+    "concept": "Stielvoll is a concept brand created for a portfolio project. No real certification or orders.",
+    "place": "Hamburg-Ottensen"
+  },
+  "flavours": {
+    "title": "Six flavours.",
+    "sub": "Never more than four ingredients. Ingredients and allergens are on every flavour.",
+    "ingredients": "Ingredients",
+    "allergensNone": "Allergens: none",
+    "allergensContains": "Contains: {allergens}",
+    "vegan": "Vegan",
+    "perPiece": "each",
+    "add": "Add to cart",
+    "addNamed": "Add {flavour} to cart",
+    "show": "Show {flavour} in the picture above"
+  },
+  "box": {
+    "title": "Build your box.",
+    "sub": "6 for {six}, 12 for {twelve}. Any mix.",
+    "size": "Box size",
+    "sizeLabel": "Box of {size}",
+    "chosen": "{count} of {size} chosen",
+    "remaining": "{n} to go.",
+    "full": "The box is full.",
+    "over": "{n} too many. Take {n, plural, one {one} other {some}} out.",
+    "singly": "Bought one by one",
+    "boxPrice": "As a box",
+    "saving": "You save {amount}",
+    "add": "Add box to cart",
+    "more": "One more {flavour}",
+    "less": "One fewer {flavour}",
+    "quantity": "{flavour}: {n} in the box"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Nothing in here yet.",
+    "emptyCta": "See the flavours",
+    "boxOf": "Box of {size}",
+    "remove": "Remove",
+    "removeNamed": "Remove {item}",
+    "more": "One more {flavour}",
+    "less": "One fewer {flavour}",
+    "contains": "Contains: {allergens}",
+    "subtotal": "Subtotal",
+    "note": "You choose pickup or delivery in the next step.",
+    "checkout": "Checkout",
+    "soon": "Checkout arrives in checkpoint 3.",
+    "close": "Close cart"
+  },
+  "how": {
+    "title": "How ordering works.",
+    "steps": [
+      {
+        "title": "Choose your box",
+        "text": "Six or twelve popsicles, in any mix."
+      },
+      {
+        "title": "Pick a time",
+        "text": "Pick up at the shop, or get them delivered in a two-hour slot."
+      },
+      {
+        "title": "Straight into the freezer",
+        "text": "Freeze them as soon as you’re home. They keep for up to three months."
+      }
+    ]
+  },
+  "about": {
+    "title": "What’s inside is on the label.",
+    "points": [
+      {
+        "title": "Organic fruit from the region",
+        "text": "Wherever we can, the fruit comes from around Hamburg."
+      },
+      {
+        "title": "Four ingredients at most",
+        "text": "Fruit, a little cane sugar, a herb or spice. Nothing more."
+      },
+      {
+        "title": "Fresh every morning",
+        "text": "We make the popsicles in Ottensen each morning."
+      }
+    ]
+  },
+  "visit": {
+    "title": "Visit and delivery.",
+    "hoursTitle": "Opening hours",
+    "hours": [
+      "Tuesday to Sunday, 12:00 to 20:00",
+      "April to October",
+      "Fridays and Saturdays until 22:00 in July and August"
+    ],
+    "pickupTitle": "Pickup",
+    "pickup": "At the shop in Hamburg-Ottensen, at the time you choose.",
+    "deliveryTitle": "Delivery",
+    "delivery": "Same day, frozen, to these districts:",
+    "fee": "{fee} per delivery, free from {free}.",
+    "elsewhere": "Somewhere else in Hamburg? Pick up your box at the shop.",
+    "mapAlt": "Illustrated map: Stielvoll is in Hamburg-Ottensen, north of the river Elbe."
+  },
+  "faq": {
+    "title": "Good to know.",
+    "items": [
+      {
+        "q": "Which flavours contain allergens?",
+        "a": "Blueberry Lavender contains gluten (oats) and Raspberry Rose contains milk. The other four contain no allergens."
+      },
+      {
+        "q": "How long do they keep?",
+        "a": "Up to three months at −18 °C. Once they have melted, don’t refreeze them."
+      },
+      {
+        "q": "Are they vegan?",
+        "a": "Four of the six flavours are vegan. Each flavour says so."
+      },
+      {
+        "q": "Where do you deliver?",
+        "a": "To Altona, Ottensen, Eimsbüttel, Sternschanze, St. Pauli and HafenCity, the same day."
+      },
+      {
+        "q": "Can I change or cancel an order?",
+        "a": "Yes, up to two hours before your slot."
+      }
+    ]
+  }
+}
