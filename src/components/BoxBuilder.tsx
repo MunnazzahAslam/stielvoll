@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { BOX_PRICE_CENTS, BOX_SIZES, FLAVOURS, type BoxSize, type FlavourId } from "@/data/shop";
 import { addBox, flyToCart, mixCount, mixSinglesCents, type Mix } from "@/lib/cart";
@@ -16,6 +16,7 @@ export default function BoxBuilder() {
   const l = useLocalised();
   const money = useMoney();
   const { flavour } = useFlavour();
+  const reduced = useReducedMotion();
   const [size, setSize] = useState<BoxSize>(6);
   const [mix, setMix] = useState<Mix>({});
 
@@ -134,7 +135,7 @@ export default function BoxBuilder() {
             <motion.button
               type="button"
               disabled={left !== 0}
-              whileTap={{ scaleX: 1.05, scaleY: 0.9 }}
+              whileTap={reduced ? undefined : { scaleX: 1.05, scaleY: 0.9 }}
               transition={squish}
               onClick={(e) => {
                 addBox(size, mix);

@@ -2,16 +2,16 @@
 
 import { useRef } from "react";
 import { motion } from "motion/react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cartCount } from "@/lib/cart";
 import CartDrawer from "./CartDrawer";
 import { useCart } from "./hooks";
+import LocaleSwitch from "./LocaleSwitch";
 import Logo from "./Logo";
 
 export default function Header() {
   const t = useTranslations("nav");
-  const locale = useLocale();
   const count = cartCount(useCart());
   const drawer = useRef<HTMLDialogElement>(null);
 
@@ -23,26 +23,14 @@ export default function Header() {
         </Link>
 
         <nav aria-label={t("main")} className="ml-auto hidden gap-7 text-[15px] font-semibold md:flex">
-          <a href="#flavours" className="hover:underline hover:underline-offset-4">{t("flavours")}</a>
-          <a href="#box" className="hover:underline hover:underline-offset-4">{t("box")}</a>
-          <a href="#visit" className="hover:underline hover:underline-offset-4">{t("visit")}</a>
+          {/* Section links also work from the checkout and order pages. */}
+          <Link href={{ pathname: "/", hash: "flavours" }} className="hover:underline hover:underline-offset-4">{t("flavours")}</Link>
+          <Link href={{ pathname: "/", hash: "box" }} className="hover:underline hover:underline-offset-4">{t("box")}</Link>
+          <Link href={{ pathname: "/", hash: "visit" }} className="hover:underline hover:underline-offset-4">{t("visit")}</Link>
         </nav>
 
         <div className="ml-auto flex items-center gap-2 md:ml-0">
-          {/* DE / EN switch: the current language is marked, the other is a link. */}
-          <div className="flex items-center rounded-full border border-currant/20 p-0.5 text-[13px] font-bold">
-            {(["de", "en"] as const).map((l) =>
-              l === locale ? (
-                <span key={l} aria-current="true" className="rounded-full bg-currant px-2.5 py-1 text-frost uppercase">
-                  {l}
-                </span>
-              ) : (
-                <Link key={l} href="/" locale={l} aria-label={t("switchTo")} className="rounded-full px-2.5 py-1 uppercase hover:bg-currant/10">
-                  {l}
-                </Link>
-              ),
-            )}
-          </div>
+          <LocaleSwitch />
 
           <button
             id="cart-button"

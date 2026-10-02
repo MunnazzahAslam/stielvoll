@@ -13,8 +13,8 @@ let cart: Cart = EMPTY;
 let loaded = false;
 const listeners = new Set<() => void>();
 
-/** Keep only what the shop still sells, in case stored data is old or was edited. */
-function clean(raw: unknown): Cart {
+/** Keep only what the shop still sells, in case stored data is old or was edited. The server uses it on checkout too. */
+export function clean(raw: unknown): Cart {
   const ids = new Set<string>(FLAVOURS.map((f) => f.id));
   const mix = (m: unknown): Mix =>
     Object.fromEntries(
@@ -79,6 +79,8 @@ export function addBox(size: BoxSize, mix: Mix) {
 }
 
 export const removeBox = (id: string) => set({ ...getCart(), boxes: cart.boxes.filter((b) => b.id !== id) });
+
+export const clearCart = () => set(EMPTY);
 
 /* ---------- sums ---------- */
 

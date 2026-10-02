@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { FLAVOURS } from "@/data/shop";
 import { addSingle, flyToCart } from "@/lib/cart";
@@ -11,12 +11,15 @@ import { FlavourTags, Ingredients } from "./Tags";
 
 /** A quick, bouncy spring: the 2D cousin of the jelly in the hero. */
 const squish = { type: "spring", stiffness: 420, damping: 13 } as const;
+/** With reduced motion: a gentle scale, no bounce. */
+const gentle = { type: "tween", duration: 0.2, ease: "easeOut" } as const;
 
 export default function Flavours() {
   const t = useTranslations("flavours");
   const l = useLocalised();
   const money = useMoney();
   const { setFlavour } = useFlavour();
+  const reduced = useReducedMotion();
 
   return (
     <section id="flavours" aria-labelledby="flavours-title" className="py-16 md:py-24">
@@ -30,9 +33,9 @@ export default function Flavours() {
           {FLAVOURS.map((f) => (
             <motion.li
               key={f.id}
-              whileHover={{ scale: 1.025 }}
-              whileTap={{ scaleX: 1.03, scaleY: 0.965 }}
-              transition={squish}
+              whileHover={{ scale: reduced ? 1.01 : 1.025 }}
+              whileTap={reduced ? undefined : { scaleX: 1.03, scaleY: 0.965 }}
+              transition={reduced ? gentle : squish}
               className="flex flex-col overflow-hidden rounded-[28px] bg-white"
             >
               {/* The picture also switches the hero to this flavour. */}
@@ -68,7 +71,7 @@ export default function Flavours() {
 
                 <motion.button
                   type="button"
-                  whileTap={{ scaleX: 1.06, scaleY: 0.88 }}
+                  whileTap={reduced ? undefined : { scaleX: 1.06, scaleY: 0.88 }}
                   transition={squish}
                   onClick={(e) => {
                     addSingle(f.id);

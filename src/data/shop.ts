@@ -138,3 +138,38 @@ export const DELIVERY = {
   feeCents: 490,
   freeFromCents: 3500,
 };
+
+/** Postcodes we deliver to, and the district each one belongs to. */
+export const DELIVERY_POSTCODES: Record<string, string> = {
+  "22763": "Ottensen",
+  "22765": "Ottensen",
+  "22767": "Altona",
+  "22769": "Altona",
+  "20253": "Eimsbüttel",
+  "20255": "Eimsbüttel",
+  "20257": "Eimsbüttel",
+  "20259": "Eimsbüttel",
+  "20357": "Sternschanze",
+  "20359": "St. Pauli",
+  "20457": "HafenCity",
+};
+
+export const deliveryDistrict = (postcode: string) => DELIVERY_POSTCODES[postcode.trim()] ?? null;
+
+export const deliveryFeeCents = (subtotalCents: number) => (subtotalCents >= DELIVERY.freeFromCents ? 0 : DELIVERY.feeCents);
+
+/**
+ * Pickup and delivery slots: two hours each between 12:00 and 20:00, shop time.
+ * Offered for today and the next opening day; the shop is closed on Mondays.
+ */
+export const SLOTS = {
+  timeZone: "Europe/Berlin",
+  startHours: [12, 14, 16, 18],
+  lengthHours: 2,
+  /** The kitchen needs this long between an order and the start of its slot. */
+  leadMinutes: 60,
+  /** Orders per slot before it shows as full. */
+  capacity: 6,
+  /** 0 is Sunday, 1 is Monday. */
+  closedWeekdays: [1],
+};
