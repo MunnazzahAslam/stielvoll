@@ -9,7 +9,9 @@ wobbles like jelly before settling back; tap it and you take a bite out of it.
 > Stielvoll is a concept brand created for a portfolio project. There is no real
 > certification, and no real orders are taken.
 
-![Hero: a glossy red 3D popsicle between the headline "Fruit on a stick. Nothing else." with six flavour chips below](docs/hero.png)
+![The hero popsicle being dragged, wobbling back like jelly, then bitten four times and swapped for a fresh one](docs/hero-interaction.gif)
+
+*Drag it and it wobbles; tap it and you take a bite.*
 
 ---
 
@@ -25,17 +27,15 @@ wobbles like jelly before settling back; tap it and you take a bite out of it.
 
 ## Screenshots
 
-| Flavours | Box builder |
+| Hero | Mobile, in German |
 | --- | --- |
+| ![Hero: a glossy red 3D popsicle between the headline "Fruit on a stick. Nothing else." with six flavour chips below](docs/hero.png) | ![The German hero on a phone: "Frucht am Stiel. Sonst nichts."](docs/mobile-hero-de.png) |
+| **Flavours** | **Box builder** |
 | ![Flavour cards with price, ingredients, allergen and vegan tags](docs/flavours.png) | ![Box builder: pick six or twelve popsicles in any mix](docs/box.png) |
 | **Cart** | **Checkout** |
 | ![Cart drawer with a box of six and two singles](docs/cart.png) | ![Checkout with delivery to Ottensen, a chosen time slot and the order summary](docs/checkout.png) |
-| **Confirmation** | **Mobile, in German** |
-| ![Confirmation page: "Thank you, Lena!", order ST-1042, delivery slot and a keep-frozen tip](docs/confirmation.png) | ![The German hero on a phone: "Frucht am Stiel. Sonst nichts."](docs/mobile-hero-de.png) |
-
-**Orders page** (`/admin`)
-
-![Orders page with one paid delivery order and status buttons](docs/admin.png)
+| **Confirmation** | **Orders page** (`/admin`) |
+| ![Confirmation page: "Thank you, Lena!", order ST-1042, delivery slot and a keep-frozen tip](docs/confirmation.png) | ![Orders page with one paid delivery order and status buttons](docs/admin.png) |
 
 ## Features
 

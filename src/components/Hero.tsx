@@ -64,7 +64,7 @@ export default function Hero() {
 
   return (
     <section id="top" className="overflow-hidden bg-flavour text-flavour-ink transition-colors duration-300">
-      <div className="mx-auto grid max-w-[1200px] justify-items-center px-5 pt-8 pb-9 text-center md:grid-cols-[1fr_minmax(260px,340px)_1fr] md:gap-x-8 md:px-8 md:py-[clamp(20px,4svh,44px)]">
+      <div className="mx-auto grid max-w-[1200px] justify-items-center px-5 pt-8 pb-9 text-center md:grid-cols-[1fr_minmax(260px,320px)_1fr] lg:grid-cols-[1fr_minmax(260px,380px)_1fr] md:gap-x-8 md:px-8 md:py-[clamp(20px,4svh,44px)]">
         {/* One headline, set either side of the popsicle on wide screens. */}
         <h1 className="contents">
           <span className={`${headline} md:col-start-1 md:row-start-1 md:self-end md:justify-self-end md:text-right`}>
@@ -77,9 +77,10 @@ export default function Hero() {
 
         <div
           ref={stage}
-          className="relative mt-5 h-[min(50svh,400px)] w-full md:col-start-2 md:row-span-2 md:row-start-1 md:mt-0 md:h-[clamp(330px,62svh,520px)]"
+          className="relative mt-5 h-[min(50svh,400px)] w-full md:col-start-2 md:row-span-2 md:row-start-1 md:mt-0 md:h-[clamp(300px,62svh,390px)] lg:h-[clamp(330px,62svh,460px)]"
         >
-          {/* a flat disc of lighter flavour colour, so the popsicle stands off the background */}
+          {/* a flat disc of lighter flavour colour, so the popsicle stands off the background.
+              At 82% of the stage height it must fit the middle column: keep the heights above in step with it. */}
           <div className="absolute top-1/2 left-1/2 aspect-square h-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/25" aria-hidden="true" />
 
           {/* The still popsicle shows first, and stays when 3D isn't available. */}
