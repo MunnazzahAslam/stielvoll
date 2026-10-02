@@ -90,7 +90,7 @@ export default async function AdminPage() {
                     ))}
                   </ul>
                   <p className="mt-1 text-sm font-semibold">
-                    {itemsCount(order.items)} {itemsCount(order.items) === 1 ? "popsicle" : "popsicles"} ·{euro.format(order.total_cents / 100)}
+                    {itemsCount(order.items)} {itemsCount(order.items) === 1 ? "popsicle" : "popsicles"} · {euro.format(order.total_cents / 100)}
                     {order.delivery_cents ? ` (incl. ${euro.format(order.delivery_cents / 100)} delivery)` : ""}
                   </p>
                 </div>

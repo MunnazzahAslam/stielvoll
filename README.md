@@ -9,16 +9,33 @@ wobbles like jelly before settling back; tap it and you take a bite out of it.
 > Stielvoll is a concept brand created for a portfolio project. There is no real
 > certification, and no real orders are taken.
 
+![Hero: a glossy red 3D popsicle between the headline "Fruit on a stick. Nothing else." with six flavour chips below](docs/hero.png)
+
 ---
 
 ## Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Tech stack](#tech-stack)
 - [Getting started](#getting-started)
 - [Project structure](#project-structure)
 - [Ordering](#ordering)
 - [Deploying](#deploying)
+
+## Screenshots
+
+| Flavours | Box builder |
+| --- | --- |
+| ![Flavour cards with price, ingredients, allergen and vegan tags](docs/flavours.png) | ![Box builder: pick six or twelve popsicles in any mix](docs/box.png) |
+| **Cart** | **Checkout** |
+| ![Cart drawer with a box of six and two singles](docs/cart.png) | ![Checkout with delivery to Ottensen, a chosen time slot and the order summary](docs/checkout.png) |
+| **Confirmation** | **Mobile, in German** |
+| ![Confirmation page: "Thank you, Lena!", order ST-1042, delivery slot and a keep-frozen tip](docs/confirmation.png) | ![The German hero on a phone: "Frucht am Stiel. Sonst nichts."](docs/mobile-hero-de.png) |
+
+**Orders page** (`/admin`)
+
+![Orders page with one paid delivery order and status buttons](docs/admin.png)
 
 ## Features
 
@@ -121,8 +138,10 @@ src/
     cart.ts                 Cart contents, sums and persistence
     order.ts                Order types and order lines
     slots.ts                Slots in shop time (Europe/Berlin)
-    server/                 Env, Stripe, order storage, admin sign-in (server only)
+    server/                 Env, Stripe, order storage, admin sign-in, rate limit (server only)
 supabase/schema.sql         The orders table
+docs/                       README screenshots
+```
 
 ## Ordering
 
@@ -130,10 +149,13 @@ supabase/schema.sql         The orders table
   is in the cart.
 - Slots are 12–14, 14–16, 16–18 and 18–20, at least an hour ahead, for today and the next
   opening day (the shop is closed on Mondays). Each slot takes six orders; unpaid orders hold
-  their place for the 30 minutes a Stripe session stays open. The April-to-October season is
+  their place for the 30 minutes a Stripe session stays open. The slot is counted again after
+  an order is saved, so orders placed at the same moment can't overfill it. The April-to-October season is
   not enforced, so the demo works all year.
 - Delivery postcodes: 22763, 22765 (Ottensen), 22767, 22769 (Altona), 20253–20259
   (Eimsbüttel), 20357 (Sternschanze), 20359 (St. Pauli), 20457 (HafenCity).
+- Each visitor can place five orders in ten minutes, so a script can't hold every slot. The
+  count is kept per server instance.
 - The confirmation link carries the Stripe session id, so order numbers alone can't be used to
   look up someone's details.
 
