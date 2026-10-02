@@ -139,7 +139,7 @@
       },
       {
         "q": "Are they vegan?",
-        "a": "Four of the six flavours are vegan. Each flavour says so."
+        "a": "Five of the six flavours are vegan. Each flavour says so."
       },
       {
         "q": "Where do you deliver?",
@@ -199,6 +199,7 @@
       "slot_unavailable": "This time slot can no longer be booked. Please choose another.",
       "slot_full": "This time slot has just filled up. Please choose another.",
       "payment_unavailable": "Payment isn’t available right now. Please try again in a moment.",
+      "rate_limited": "Too many orders in a short time. Please wait a few minutes.",
       "network": "Couldn’t reach the shop. Please try again."
     },
     "fieldErrors": {

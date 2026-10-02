@@ -139,7 +139,7 @@
       },
       {
         "q": "Ist das Eis vegan?",
-        "a": "Vier von sechs Sorten sind vegan. Es steht an jeder Sorte."
+        "a": "Fünf von sechs Sorten sind vegan. Es steht an jeder Sorte."
       },
       {
         "q": "Wohin liefert ihr?",
@@ -199,6 +199,7 @@
       "slot_unavailable": "Dieses Zeitfenster ist nicht mehr buchbar. Bitte wähl ein anderes.",
       "slot_full": "Dieses Zeitfenster ist gerade voll geworden. Bitte wähl ein anderes.",
       "payment_unavailable": "Die Zahlung ist gerade nicht erreichbar. Bitte versuch es gleich noch einmal.",
+      "rate_limited": "Zu viele Bestellungen in kurzer Zeit. Bitte warte ein paar Minuten.",
       "network": "Keine Verbindung zum Shop. Bitte versuch es noch einmal."
     },
     "fieldErrors": {

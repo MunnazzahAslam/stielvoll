@@ -104,7 +104,7 @@ export const FLAVOURS: Flavour[] = [
       { name: { de: "Lavendel", en: "lavender" } },
     ],
     allergens: { de: "Gluten (Hafer)", en: "Gluten (oats)" },
-    vegan: false,
+    vegan: true,
     priceCents: 450,
   },
   {

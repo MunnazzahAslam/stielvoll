@@ -1,14 +1,15 @@
-import { deliveryDistrict, deliveryFeeCents, flavourById } from "@/data/shop";
+import { deliveryDistrict, deliveryFeeCents, flavourById, SLOTS } from "@/data/shop";
 import { routing, type Locale } from "@/i18n/routing";
 import { clean } from "@/lib/cart";
 import { itemsSubtotalCents, orderItems, type Fulfilment } from "@/lib/order";
 import { isBookable } from "@/lib/slots";
 import { siteUrl } from "@/lib/server/env";
-import { createOrder, deleteUnpaidOrder, isSlotFull, updateOrder } from "@/lib/server/orders";
+import { createOrder, deleteUnpaidOrder, isSlotFull, slotLoad, updateOrder } from "@/lib/server/orders";
+import { allowOrder, clientKey } from "@/lib/server/rateLimit";
 import { stripe } from "@/lib/server/stripe";
 
 /** Error codes the checkout form knows how to explain (messages: checkout.errors.*). */
-type ErrorCode = "cart_empty" | "invalid_details" | "postcode_outside" | "slot_unavailable" | "slot_full" | "payment_unavailable";
+type ErrorCode = "cart_empty" | "invalid_details" | "postcode_outside" | "slot_unavailable" | "slot_full" | "payment_unavailable" | "rate_limited";
 
 const fail = (error: ErrorCode, status = 400, fields?: string[]) => Response.json({ error, fields }, { status });
 
@@ -50,6 +51,8 @@ export async function POST(request: Request) {
   if (fulfilment === "delivery" && !deliveryDistrict(postcode)) return fail("postcode_outside", 400, ["postcode"]);
   if (!isBookable(slot)) return fail("slot_unavailable", 409, ["slot"]);
   if (await isSlotFull(slot)) return fail("slot_full", 409, ["slot"]);
+  // Counted only for orders that would otherwise go through, so typos in the form cost nothing.
+  if (!allowOrder(clientKey(request))) return fail("rate_limited", 429);
 
   const subtotal = itemsSubtotalCents(items);
   const delivery = fulfilment === "delivery" ? deliveryFeeCents(subtotal) : 0;
@@ -67,6 +70,13 @@ export async function POST(request: Request) {
     delivery_cents: delivery,
     total_cents: subtotal + delivery,
   });
+
+  // Two orders can pass the check above at the same moment. Counting again with this order in place
+  // catches that: whoever pushes the slot over capacity steps back (at worst both do, never too many).
+  if ((await slotLoad([order.slot_start]))[order.slot_start] > SLOTS.capacity) {
+    await deleteUnpaidOrder(order.id);
+    return fail("slot_full", 409, ["slot"]);
+  }
 
   const base = `${siteUrl(request)}${locale === routing.defaultLocale ? "" : `/${locale}`}`;
   const confirmation = (session: string) => `${base}/order/${order.number}?s=${session}`;
